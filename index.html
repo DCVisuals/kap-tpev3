@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAP TPE – DCVisuals</title>
+  <meta name="description" content="Profitez de l'aide Kap TPE pour financer jusqu'à 60 % de votre projet de communication numérique à La Réunion : vidéo, site vitrine, visite virtuelle, photo professionnelle avec DCVisuals." />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #001f3f, #2e3b4e);
+      color: #fff;
+    }
+    header, section {
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #FFD700;
+    }
+    .hero {
+      background-color: #2f2f2f;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #2f2f2f;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 4px 20px rgba(255,255,255,0.2);
+    }
+    a.cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: #FFD700;
+      color: #000;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    a.cta-button:hover {
+      background: #FFC300;
+    }
+    .example-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #FFD700;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .example-button:hover {
+      background: #FFC300;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      background-color: #2f2f2f;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 90%;
+      max-width: 800px;
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .modal-content iframe, .modal-content img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .close {
+      color: #FFD700;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+    .grid-section-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .grid-section-2x2 {
+        grid-template-columns: 1fr;
+      }
+      header, section {
+        padding: 1.5rem 1rem;
+      }
+    }
+    label {
+      display: block;
+      margin: 0.75rem 0 0.25rem;
+      font-weight: bold;
+    }
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+    .card-block label {
+      margin: 0.3rem 0;
+      font-weight: normal;
+    }
+  </style>
+
+<style>
+  .simulateur-kap {
+  max-width: 650px;
+  background-color: #002b5c;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.simulateur-kap h2 {
+  color: #FFD700;
+  font-size: 1.75rem;
+}
+
+.simulateur-kap p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.simulateur-kap label {
+  margin-top: 1rem;
+  display: block;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.simulateur-kap input,
+.simulateur-kap select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.simulateur-kap button {
+  margin-top: 2rem;
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.simulateur-kap button:hover {
+  background-color: #e6c200;
+}
+
+.simulateur-kap #result {
+  margin-top: 2rem;
+  background-color: #1e1e1e;
+  border-left: 5px solid #FFD700;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.simulateur-kap .contact-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.simulateur-kap .contact-buttons a {
+  display: inline-block;
+  padding: 0.75rem;
+  background-color: #00e676;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+</style>
+
+<style>
+  .card-block {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 12px;
+    background-color: #002B5C;
+  }
+  .card-block:nth-of-type(odd) {
+    background-color: #003a73;
+  }
+  .card-block:nth-of-type(even) {
+    background-color: #002f5c;
+  }
+
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s;
+  }
+
+  .checkbox-group label:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  details {
+    background-color: rgba(255,255,255,0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  details summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #FFD700;
+  }
+
+  textarea,
+  input[type="text"],
+  input[type="number"],
+  input[type="url"],
+  select {
+    background-color: #001f3f;
+    border: 1px solid #FFD700;
+    border-radius: 6px;
+    padding: 0.5rem;
+    color: #fff;
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+
+  textarea:focus,
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: #FFC300;
+    background-color: #002b5c;
+  }
+</style>
+
+<style>
+  .simulateur-budget {
+    max-width: 650px;
+    margin: 2rem auto;
+    background-color: #002b5c;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  .simulateur-budget h2 {
+    color: #FFD700;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .simulateur-budget label {
+    color: #FFD700;
+    font-weight: bold;
+    margin: 1rem 0 0.25rem;
+    display: block;
+  }
+
+  .simulateur-budget input[type="number"],
+  .simulateur-budget input[type="text"],
+  .simulateur-budget select,
+  .simulateur-budget textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    color: #000;
+  }
+
+  .simulateur-budget details {
+    background-color: #003a73;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .simulateur-budget summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #FFD700;
+  }
+
+  .simulateur-budget button {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+
+  .simulateur-budget button:hover {
+    background-color: #e6c200;
+  }
+
+  .simulateur-budget .card-block {
+    background-color: #003a73;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+</style>
+
+</head>
+<body>
+  <header class="hero">
+    <h1>Aide Kap TPE pour artisans et commerçants à La Réunion</h1>
+    <p>Et si vous deveniez l’acteur principal de votre propre entreprise&nbsp;?</p>
+    <p>Accédez à une subvention allant jusqu’à 60 % pour valoriser votre image, votre savoir-faire et votre présence en ligne avec l’aide KAP TPE et DCVisuals.</p>
+  </header>
+
+<section class="benefits">
+  <h2>🚀 Ce que cette aide peut changer pour vous</h2>
+  <div class="grid-section-2x2">
+    <div class="card">
+      <h3>🎥 Exprimez votre voix</h3>
+      <p>Créez une vidéo qui raconte votre histoire, montre vos valeurs et attire la confiance.</p>
+      <button class="example-button" onclick="openModal('modalVideo')">🎥 Voir un exemple</button>
+    </div>
+    <div class="card">
+      <h3>🌐 Devenez visible en ligne</h3>
+      <p>Un site internet moderne et bien référencé qui travaille pour vous 24h/24.</p>
+      <button class="example-button" onclick="openModal('modalSite')">🌐 Voir un exemple</button>
+    </div>
+    <div class="card">
+      <h3>📷 Inspirez la confiance</h3>
+      <p>Des photos professionnelles qui subliment votre espace ou vos réalisations.</p>
+      <button class="example-button" onclick="openModal('modalPhoto')">📷 Voir un exemple</button>
+    </div>
+    <div class="card">
+      <h3>🏪 Offrez une visite à distance</h3>
+      <p>Avec une visite virtuelle, vos clients découvrent votre lieu sans se déplacer.</p>
+      <button class="example-button" onclick="openModal('modalVisite')">🏪 Voir un exemple</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div id="modalVideo" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalVideo')">&times;</span>
+    <h3>Découvrez un exemple de production vidéo</h3>
+    <iframe src="https://www.youtube.com/embed/2pKziRg1XUs" frameborder="0" allowfullscreen style="width: 100%; height: 315px; border-radius: 8px;"></iframe>
+    <a href="https://www.dcvisuals.fr/prestations/videaste-professionnel" class="cta-button" target="_blank">Voir toutes nos vidéos</a>
+  </div>
+</div>
+
+<div id="modalSite" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalSite')">&times;</span>
+    <h3>Découvrez des exemples de sites web</h3>
+    <img src="https://dcvisuals.github.io/dcvisuals-portfolio/photo5.png" alt="Exemple site web" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px;">
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem;">
+      <a href="https://villapanoramagrandeanse.re/" class="cta-button" target="_blank">Site n° 1</a>
+      <a href="https://villaidylle.re/" class="cta-button" target="_blank">Site n° 2</a>
+      <a href="https://www.villaspagrandanse.re/" class="cta-button" target="_blank">Site n° 3</a>
+      <a href="https://www.lappartdanslesnuages.re/" class="cta-button" target="_blank">Site n° 4</a>
+    </div>
+  </div>
+</div>
+
+<div id="modalPhoto" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalPhoto')">&times;</span>
+    <h3>Découvrez des exemples de photos professionnelles</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px;">
+      <img src="https://dcvisuals.github.io/dcvisuals-portfolio/photo1.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px;">
+      <img src="https://dcvisuals.github.io/dcvisuals-portfolio/photo2.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px;">
+      <img src="https://dcvisuals.github.io/dcvisuals-portfolio/photo3.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px;">
+      <img src="https://dcvisuals.github.io/dcvisuals-portfolio/photo4.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px;">
+    </div>
+    <a href="https://www.dcvisuals.fr/portfolio" class="cta-button" target="_blank">Voir le portfolio</a>
+  </div>
+</div>
+
+<div id="modalVisite" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalVisite')">&times;</span>
+    <h3>Découvrez un exemple de visite virtuelle</h3>
+    <iframe src="https://my.matterport.com/show/?m=K5jbgZbGz8S" frameborder="0" allowfullscreen style="width: 100%; height: 400px; border-radius: 8px;"></iframe>
+    <a href="https://www.dcvisuals.fr/prestations/visite-virtuelle-360-et-3d" class="cta-button" target="_blank">Voir toutes nos visites</a>
+  </div>
+</div>
+
+
+
+
+  <section class="goals">
+    <h2>🎯 Objectifs marketing concrets</h2>
+    <ul>
+      <li>🔍 Être mieux référencé sur Google</li>
+      <li>📈 Augmenter votre visibilité locale</li>
+      <li>💬 Développer vos échanges et fidéliser</li>
+      <li>💡 Démarquer votre marque des concurrents</li>
+    </ul>
+  </section>
+
+  <section class="steps">
+    <h2>🛠️ Comment ça se passe ?</h2>
+    <div class="grid">
+      <div class="card"><h3>1. Définir vos objectifs</h3><p>Nous échangeons sur votre activité et vos envies.</p></div>
+      <div class="card"><h3>2. Construire le projet</h3><p>Nous vous proposons une solution éligible et impactante.</p></div>
+      <div class="card"><h3>3. Réaliser vos contenus</h3><p>Nous réalisons vidéo, site, visite virtuelle, photos…</p></div>
+      <div class="card"><h3>4. Accompagnement au dossier</h3><p>Nous vous aidons à déposer votre demande Kap TPE.</p></div>
+    </div>
+  </section>
+
+
+<!-- Simulateur Montant Projet avancé -->
+<section class="simulateur-budget" style="background-color: #002B5C; padding: 2rem; border-radius: 12px; color: #fff;">
+
+  <h2>💸 Estimez le montant de votre projet</h2>
+  <form id="estimationForm">
+    <div class="card-block">
+      <label style="font-weight: bold; margin-bottom: .5rem; display: block;">Choisissez votre ou vos objectifs :</label>
+      <div class="checkbox-group" style="display: flex; flex-direction: column; gap: .75rem;">
+        <label>
+          <input type="checkbox" name="objectif" value="photo" onchange="genererDetailsProjet(this)"> 📷 Reportage photo professionnel
+        </label>
+        <div id="bloc-photo"></div>
+
+        <label>
+          <input type="checkbox" name="objectif" value="video" onchange="genererDetailsProjet(this)"> 🎥 Vidéo de présentation ou promotion
+        </label>
+        <div id="bloc-video"></div>
+
+        <label>
+          <input type="checkbox" name="objectif" value="site" onchange="genererDetailsProjet(this)"> 🌐 Création de site web
+        </label>
+        <div id="bloc-site"></div>
+
+        <label>
+          <input type="checkbox" name="objectif" value="visite" onchange="genererDetailsProjet(this)"> 🏠 Visite virtuelle immersive
+        </label>
+        <div id="bloc-visite"></div>
+      </div>
+    </div>
+
+    <button type="button" onclick="calculBudgetTotal()" class="cta-yellow" style="margin-top: 2rem; background-color: #FFD700; color: #000; font-weight: bold; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; cursor: pointer;">Calculer le budget estimé</button>
+  </form>
+  <div id="resultatEstimation"></div>
+</section>
+
+<script>
+function genererDetailsProjet(input) {
+  const id = `bloc-${input.value}`;
+  const blocParent = document.getElementById(id);
+  blocParent.innerHTML = "";
+
+  if (!input.checked) return;
+
+  let bloc = document.createElement("div");
+  bloc.className = "card-block";
+  bloc.style = "background-color: #003a73; padding: 1rem; margin-top: 1rem; border-radius: 8px;";
+
+  switch (input.value) {
+
+
+
+case "photo":
+  bloc.innerHTML = `
+    <p style="margin-bottom:1rem;">Sélectionnez un ou plusieurs formats de prise de vue :</p>
+
+    <details>
+      <summary><strong>📸 Prises de vue classiques</strong></summary>
+      <label>Choisissez un pack :</label>
+      <select id="photoPackSelect" data-type="photo-pack">
+        <option value="525">10 à 15 photos</option>
+        <option value="875">15 à 30 photos</option>
+        <option value="1575">30 à 50 photos</option>
+        <option value="0">Personnalisé (35€/photo, minimum 5)</option>
+      </select>
+
+      <div class="custom-photo-wrapper" style="display:none; margin-top: .5rem;">
+        <input type="number" id="photoCustomInput" placeholder="Nombre de photos (min. 5)" data-libre="photo" min="5">
+        <small id="photoErrorMsg" style="color: #FFD700; display: none;">⚠️ Minimum 5 photos</small>
+      </div>
+
+      <div class="checkbox-group" style="margin-top:1rem;">
+        <label><input type="checkbox" data-option="drone-photo"> Prise de vue drone</label>
+      </div>
+    </details>
+
+    <details style="margin-top:1.5rem;">
+      <summary><strong>🛰️ Photogrammétrie (modélisation 3D)</strong></summary>
+      <label>Surface à couvrir (en m²) :</label>
+      <input type="number" min="10" step="10" data-type="photo-3d-surface" placeholder="Ex : 1500">
+
+      <label style="margin-top:0.75rem;">Niveau de détail souhaité (px/cm) :</label>
+      <input type="text" data-type="photo-3d-detail" placeholder="Ex : 1.2 px/cm">
+
+      <div class="checkbox-group" style="margin-top:1rem;">
+        <label><input type="checkbox" data-option="ortho"> Livraison Orthophoto</label>
+        <label><input type="checkbox" data-option="modele3d"> Livraison modèle 3D</label>
+      </div>
+    </details>
+
+    <details style="margin-top:1.5rem;">
+      <summary><strong>🔧 Prises de vue non retouchées</strong></summary>
+      <label>Nombre de photos sans retouche :</label>
+      <input type="number" min="1" data-type="photo-brut" placeholder="Ex : 20">
+    </details>
+
+    <div style="margin-top:1.5rem;">
+      <h4>✏️ Informations complémentaires</h4>
+      <label>Précisions ou contexte :</label>
+      <textarea data-type="photo-commentaire" placeholder="Ex : lieu(x) du/des shooting(s), usage des photos (limite de cession de droit souhaité), délai de livraison urgent..." style="width:100%; height: 80px;"></textarea>
+    </div>
+  `;
+
+  setTimeout(() => {
+    const select = document.getElementById("photoPackSelect");
+    const wrapper = document.querySelector(".custom-photo-wrapper");
+    const input = document.getElementById("photoCustomInput");
+
+    if (!select || !wrapper || !input) return;
+
+    select.addEventListener("change", () => {
+      if (select.value === "0") {
+        wrapper.style.display = "block";
+        input.required = true;
+      } else {
+        wrapper.style.display = "none";
+        input.required = false;
+        input.value = "";
+      }
+    });
+
+    // Afficher si déjà sélectionné
+    if (select.value === "0") {
+      wrapper.style.display = "block";
+      input.required = true;
+    }
+  }, 50);
+
+  break;
+
+
+
+
+
+
+case "video":
+  bloc.innerHTML = `
+    <h4>🎬 Sélectionnez les types de vidéos souhaités :</h4>
+
+    <details style="margin-bottom:1rem;">
+      <summary><strong>📌 Vidéo institutionnelle</strong></summary>
+      <div style="margin-top:0.5rem;">
+        <label>Quantité :</label>
+        <input type="number" min="0" data-type="video-institutionnelle-quantite" placeholder="Ex : 1">
+        <label>Durée (en minutes) :</label>
+        <input type="number" min="0" data-type="video-institutionnelle-duree" placeholder="Ex : 3">
+      </div>
+    </details>
+
+    <details style="margin-bottom:1rem;">
+      <summary><strong>📱 Vidéo format court (réseaux sociaux)</strong></summary>
+      <div style="margin-top:0.5rem;">
+        <label>Quantité :</label>
+        <input type="number" min="0" data-type="video-short-quantite" placeholder="Ex : 5">
+        <label>Durée (en secondes) :</label>
+        <input type="number" min="0" data-type="video-short-duree" placeholder="Ex : 30">
+      </div>
+    </details>
+
+    <details style="margin-bottom:1rem;">
+      <summary><strong>🎓 Vidéo longue (formations, conférences...)</strong></summary>
+      <div style="margin-top:0.5rem;">
+        <label>Quantité :</label>
+        <input type="number" min="0" data-type="video-longue-quantite" placeholder="Ex : 1">
+        <label>Durée (en minutes) :</label>
+        <input type="number" min="0" data-type="video-longue-duree" placeholder="Ex : 30">
+      </div>
+    </details>
+
+    <h4 style="margin-top:1rem;">⚙️ Options complémentaires</h4>
+    <div class="checkbox-group" style="margin-top:0.5rem;">
+      <label><input type="checkbox" data-option="drone"> Prise de vue drone</label>
+      <label><input type="checkbox" data-option="voix"> Voix-off</label>
+      <label><input type="checkbox" data-option="interview"> Interview</label>
+      <label><input type="checkbox" data-option="multi"> Multi caméra</label>
+      <label><input type="checkbox" data-option="sous-titres"> Sous-titres</label>
+      <label><input type="checkbox" data-option="habillage"> Habillage / Branding</label>
+    </div>
+
+    <h4 style="margin-top:1.5rem;">✏️ Informations complémentaires</h4>
+    <label>Précisions ou objectifs :</label>
+    <textarea data-type="video-commentaire" placeholder="Ex : lieu de tournage, thème abordé, messages à faire véhiculer..." style="width:100%; height: 80px;"></textarea>
+
+    <label style="margin-top:0.75rem; display:block;">Lien vers une vidéo inspirante (facultatif) :</label>
+    <input type="url" data-type="video-inspiration" placeholder="https://...">
+  `;
+  break;
+
+
+
+
+
+            case "site":
+  bloc.innerHTML = `
+    <label>Quel type de site souhaitez-vous ?</label>
+    <select data-type="site">
+      <option value="1200">Site vitrine</option>
+      <option value="1600">Site marchand</option>
+      <option value="1800">Site de réservation</option>
+    </select>
+
+    <label style="margin-top:1rem; display:block;">Nombre de pages à prévoir :</label>
+    <input type="number" data-type="site-pages" min="1" placeholder="Ex : 5 pages (accueil, contact, etc.)">
+
+    <label style="margin-top:1rem; display:block;">Fonctionnalités souhaitées :</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" data-option="formulaire"> Formulaire de contact / réservation</label>
+      <label><input type="checkbox" data-option="galerie"> Galerie photo/vidéo</label>
+      <label><input type="checkbox" data-option="maps"> Intégration Google Maps</label>
+      <label><input type="checkbox" data-option="newsletter"> Newsletter / Emailing</label>
+      <label><input type="checkbox" data-option="reseaux"> Connexion réseaux sociaux</label>
+      <label><input type="checkbox" data-option="multilingue"> Multilingue</label>
+      <label><input type="checkbox" data-option="blog"> Blog / Actualités</label>
+      <label><input type="checkbox" data-option="calendrier"> Intégration calendrier / RDV</label>
+    </div>
+
+    <label style="margin-top:1rem; display:block;">Souhaitez-vous une aide sur le contenu ?</label>
+    <select data-type="contenu">
+      <option value="fournis">Je fournis mes textes / visuels</option>
+      <option value="a_creer">Je veux que vous rédigiez et intégriez mes contenus</option>
+    </select>
+
+    <label style="margin-top:1rem; display:block;">Souhaitez-vous un accompagnement ?</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" data-option="formation"> Formation à la gestion du site</label>
+      <label><input type="checkbox" data-option="maintenance"> Maintenance / mises à jour</label>
+    </div>
+
+    <label style="margin-top:1rem; display:block;">Souhaitez-vous une identité visuelle ?</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" data-option="logo"> Création de logo</label>
+      <label><input type="checkbox" data-option="charte"> Création de design personnalisé / charte graphique</label>
+    </div>
+
+<div style="margin-top:1.5rem;">
+  <h4>✏️ Informations complémentaires</h4>
+  <label>Précisions ou besoin spécifique :</label>
+  <textarea data-type="site-commentaire" placeholder="Ex : structure du site, style souhaité, inspirations..." style="width:100%; height: 80px;"></textarea>
+</div>
+
+  `;
+  break;
+
+
+
+case "visite":
+  bloc.innerHTML = `
+    <label>Surface habitable (en m²) :</label>
+    <input type="number" data-type="visite" min="10" placeholder="Ex : 180">
+
+    <label style="margin-top:1rem; display:block;">Surface extérieure à scanner (en m²) :</label>
+    <input type="number" data-type="visite-exterieur" min="0" placeholder="Ex : 50">
+    <small style="color:#ccc; display:block; margin-top:0.25rem;">
+      ⚠️ N’indiquez que les espaces réellement à scanner : terrasse, piscine, cuisine extérieure, dépendances. Ne pas inscrire la totalité du terrain.
+    </small>
+
+    <small style="color:#ccc; display:block; margin-top:0.75rem;">
+      💡 Abonnement Matterport offert pendant 2 ans.<br>
+      Dès la 3ᵉ année : 40 €/an par tranche de 200 m².
+    </small>
+
+    <label style="margin-top:1rem; display:block;">Éléments extérieurs à intégrer :</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" data-option="piscine"> Piscine</label>
+      <label><input type="checkbox" data-option="terrasse"> Terrasse</label>
+      <label><input type="checkbox" data-option="jardin"> Jardin</label>
+    </div>
+
+    <label style="margin-top:0.75rem; display:block;">Autres éléments à modéliser (optionnel) :</label>
+    <input type="text" data-type="autres-exterieurs" placeholder="Cuisine extérieure, dépendance, garage, etc.">
+
+    <label style="margin-top:1rem; display:block;">Options d’export :</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" data-option="plan"> Plan de niveau</label>
+      <label><input type="checkbox" data-option="nuage"> Nuage de points 3D</label>
+    </div>
+
+<div style="margin-top:1.5rem;">
+  <h4>✏️ Informations complémentaires</h4>
+  <label>Précisions ou éléments particuliers :</label>
+  <textarea data-type="visite-commentaire" placeholder="Ex : accès difficile, sur plusieurs niveau, lieu du shooting, délai de livraison urgent..." style="width:100%; height: 80px;"></textarea>
+</div>
+
+  `;
+  break;
+
+  }
+
+  blocParent.appendChild(bloc);
+}
+
+function calculBudgetTotal() {
+  let total = 0;
+
+
+
+
+
+// Traitement des photos
+document.querySelectorAll("div#bloc-photo").forEach(photoBloc => {
+  let blocTotal = 0;
+
+  // 📸 Section classique
+  const classique = photoBloc.querySelector("details:nth-of-type(1)");
+  if (classique && classique.open) {
+    const selectPack = photoBloc.querySelector("select[data-type='photo-pack']");
+    if (selectPack) {
+      const val = parseInt(selectPack.value);
+      if (val === 0) {
+        const nbPhotos = parseInt(photoBloc.querySelector("input[data-libre='photo']")?.value || "0");
+        if (nbPhotos >= 5) blocTotal += nbPhotos * 35;
+      } else {
+        blocTotal += val;
+      }
+    }
+
+    if (photoBloc.querySelector("input[data-option='drone-photo']")?.checked) {
+      blocTotal += 300;
+    }
+  }
+
+  // 🛰️ Section photogrammétrie
+  const photogrammetrie = photoBloc.querySelector("details:nth-of-type(2)");
+  if (photogrammetrie && photogrammetrie.open) {
+    const surfaceM2 = parseFloat(photoBloc.querySelector("input[data-type='photo-3d-surface']")?.value || "0");
+    if (surfaceM2 > 0) {
+      const tranches = Math.ceil(surfaceM2 / 20000); // par 2 hectares = 20000 m²
+      blocTotal += tranches * 300;
+    }
+
+    if (photoBloc.querySelector("input[data-option='modele3d']")?.checked) {
+      blocTotal += 150;
+    }
+  }
+
+  // 🔧 Section photo brute
+  const brut = photoBloc.querySelector("details:nth-of-type(3)");
+  if (brut && brut.open) {
+    const nbBrut = parseInt(photoBloc.querySelector("input[data-type='photo-brut']")?.value || "0");
+    if (nbBrut > 0) {
+      blocTotal += nbBrut * 20;
+    }
+  }
+
+  total += blocTotal;
+});
+
+
+
+
+
+// Traitement des vidéos
+function getVal(name) {
+  return parseFloat(document.querySelector(`input[data-type='${name}']`)?.value || "0");
+}
+
+const instQty = getVal("video-institutionnelle-quantite");
+const instDur = getVal("video-institutionnelle-duree");
+const shortQty = getVal("video-short-quantite");
+const shortDur = getVal("video-short-duree");
+const longQty = getVal("video-longue-quantite");
+const longDur = getVal("video-longue-duree");
+
+let sousTotalVideo = 0;
+sousTotalVideo += instQty * instDur * 250; // Institutionnelle : 250 €/min
+sousTotalVideo += shortQty * (shortDur / 60) * 300; // Short : 300 €/min
+sousTotalVideo += longQty * longDur * 150; // Longue : 150 €/min
+
+const totalQty = instQty + shortQty + longQty;
+if (totalQty >= 5) sousTotalVideo *= 0.9;
+
+const optionPrix = {
+  "drone": 400,
+  "voix": 150,
+  "interview": 100,
+  "multi": 500,
+  "sous-titres": 100,
+  "habillage": 200
+};
+
+Object.entries(optionPrix).forEach(([opt, prix]) => {
+  if (document.querySelector(`input[data-option='${opt}']`)?.checked) {
+    sousTotalVideo += prix * totalQty;
+  }
+});
+
+total += Math.round(sousTotalVideo);
+
+
+
+
+// Traitement spécifique pour le site web
+document.querySelectorAll("div#bloc-site").forEach(siteBloc => {
+  const typeSite = siteBloc.querySelector("select[data-type='site']");
+  const nbPages = parseInt(siteBloc.querySelector("input[data-type='site-pages']")?.value || "0");
+  const contenu = siteBloc.querySelector("select[data-type='contenu']")?.value;
+
+  if (!typeSite) return;
+
+  let tarifBase = parseInt(typeSite.value); // 1200, 1600, 1800
+  let majPages = 0;
+  let majContenu = 0;
+
+  if (!isNaN(nbPages) && nbPages > 0) {
+    if (nbPages <= 5) majPages = 200;
+    else if (nbPages <= 10) majPages = 400;
+    else if (nbPages <= 15) majPages = 600;
+    else majPages = 600 + ((nbPages - 15) * 50);
+  }
+
+if (contenu === "a_creer") {
+  if (nbPages > 0) {
+    majContenu = nbPages * 100;
+  } else {
+    majContenu = 300; // forfait minimum si aucune page renseignée
+  }
+}
+
+  total += tarifBase + majPages + majContenu;
+
+  // Options avec montants cachés
+  const options = [
+    { selector: "input[data-option='formulaire']", price: 150 },
+    { selector: "input[data-option='galerie']", price: 150 },
+    { selector: "input[data-option='maps']", price: 100 },
+    { selector: "input[data-option='newsletter']", price: 200 },
+    { selector: "input[data-option='reseaux']", price: 100 },
+    { selector: "input[data-option='multilingue']", price: 250 },
+    { selector: "input[data-option='blog']", price: 200 },
+    { selector: "input[data-option='calendrier']", price: 250 },
+    { selector: "input[data-option='formation']", price: 300 },
+    { selector: "input[data-option='maintenance']", price: 400 },
+    { selector: "input[data-option='logo']", price: 250 },
+    { selector: "input[data-option='charte']", price: 500 },
+  ];
+
+  options.forEach(opt => {
+    const el = siteBloc.querySelector(opt.selector);
+    if (el?.checked) total += opt.price;
+  });
+});
+
+
+
+// Traitement spécifique pour la visite virtuelle
+document.querySelectorAll("div#bloc-visite").forEach(visiteBloc => {
+  const habitableInput = visiteBloc.querySelector("input[data-type='visite']");
+  const exterieurInput = visiteBloc.querySelector("input[data-type='visite-exterieur']");
+
+  if (!habitableInput || !exterieurInput) return;
+
+  const habitable = parseFloat(habitableInput.value) || 0;
+  const exterieur = parseFloat(exterieurInput.value) || 0;
+  const surfaceTotale = habitable + exterieur;
+
+  if (surfaceTotale === 0) return;
+
+  // Base : 1,5 €/m²
+  total += surfaceTotale * 1.5;
+
+  // Abonnement 2 ans inclus → 80 € par tranche de 200 m²
+  const tranches = Math.ceil(surfaceTotale / 200);
+  total += tranches * 80;
+
+  // Nuage de points → 100 € par tranche de 200 m²
+  const nuage = visiteBloc.querySelector("input[data-option='nuage']");
+  if (nuage?.checked) total += tranches * 100;
+
+  // Plan de niveau → 50 € forfaitaire
+  const plan = visiteBloc.querySelector("input[data-option='plan']");
+  if (plan?.checked) total += 50;
+});
+
+function collecterInfosPrestation() {
+  const infos = [];
+
+  // 📸 Reportage photo professionnel
+  const sectionPhoto = document.querySelector('[data-section="📸 Reportage photo professionnel"]');
+  if (sectionPhoto) {
+    infos.push("📸 Reportage photo professionnel");
+
+    const pack = sectionPhoto.querySelector('select[name="pack-photo"]');
+    if (pack && pack.value) infos.push(`📦 Pack : ${pack.value}`);
+
+    const drone = sectionPhoto.querySelector('input[name="drone-photo"]');
+    if (drone && drone.checked) infos.push("🚁 Prise de vue drone");
+
+    const surface = sectionPhoto.querySelector('input[name="surface-photo"]');
+    if (surface && surface.value) infos.push(`📐 Surface à modéliser : ${surface.value} m²`);
+
+    const detail = sectionPhoto.querySelector('input[name="niveau-detail"]');
+    if (detail && detail.value) infos.push(`📊 Détail : ${detail.value}`);
+
+    const ortho = sectionPhoto.querySelector('input[name="orthophoto"]');
+    if (ortho && ortho.checked) infos.push("🖼️ Orthophoto");
+
+    const modele = sectionPhoto.querySelector('input[name="modele-3d"]');
+    if (modele && modele.checked) infos.push("📦 Modèle 3D");
+
+    const brutes = sectionPhoto.querySelector('input[name="photos-brutes"]');
+    if (brutes && brutes.value) infos.push(`📷 Photos non retouchées : ${brutes.value}`);
+
+    const commentaire = sectionPhoto.querySelector('textarea[name="commentaire-photo"]');
+    if (commentaire && commentaire.value.trim()) infos.push(`📝 Commentaire : ${commentaire.value.trim()}`);
+  }
+
+// 🎥 Vidéo de présentation ou promotion
+  const sectionVideo = document.querySelector('[data-section="🎥 Vidéo de présentation ou promotion"]');
+  if (sectionVideo) {
+    infos.push("🎥 Vidéo de présentation ou promotion");
+
+    const type = sectionVideo.querySelector('select[name="type-video"]');
+    if (type && type.value) infos.push(`🎬 Type : ${type.value}`);
+
+    const quantite = sectionVideo.querySelector('input[name="quantite-video"]');
+    if (quantite && quantite.value) infos.push(`🎞️ Quantité : ${quantite.value}`);
+
+    sectionVideo.querySelectorAll('input[name="video-options"]:checked').forEach(opt => {
+      infos.push(`⚙️ Option : ${opt.value}`);
+    });
+
+    const commentaire = sectionVideo.querySelector('textarea[name="commentaire-video"]');
+    if (commentaire && commentaire.value.trim()) infos.push(`📝 Commentaire : ${commentaire.value.trim()}`);
+  }
+
+ // 🌐 Création de site web
+  const sectionSite = document.querySelector('[data-section="🌐 Création de site internet"]');
+  if (sectionSite) {
+    infos.push("🌐 Création de site internet");
+
+    const type = sectionSite.querySelector('select[name="type-site"]');
+    if (type && type.value) infos.push(`🌍 Type de site : ${type.value}`);
+
+    sectionSite.querySelectorAll('input[name="site-options"]:checked').forEach(opt => {
+      infos.push(`🧩 Fonctionnalité : ${opt.value}`);
+    });
+
+    sectionSite.querySelectorAll('input[name="site-contenu"]:checked').forEach(opt => {
+      infos.push(`📝 Contenu : ${opt.value}`);
+    });
+
+    sectionSite.querySelectorAll('input[name="site-identite"]:checked').forEach(opt => {
+      infos.push(`🎨 Identité visuelle : ${opt.value}`);
+    });
+
+    const commentaire = sectionSite.querySelector('textarea[name="commentaire-site"]');
+    if (commentaire && commentaire.value.trim()) infos.push(`📝 Commentaire : ${commentaire.value.trim()}`);
+  }
+
+ // 🌀 Visite virtuelle immersive
+  const sectionVirtuelle = document.querySelector('[data-section="🏠 Visite virtuelle immersive"]');
+  if (sectionVirtuelle) {
+    infos.push("🏠 Visite virtuelle immersive");
+
+    const surfInt = sectionVirtuelle.querySelector('input[name="surface-int"]');
+    if (surfInt && surfInt.value) infos.push(`📏 Intérieur : ${surfInt.value} m²`);
+
+    const surfExt = sectionVirtuelle.querySelector('input[name="surface-ext"]');
+    if (surfExt && surfExt.value) infos.push(`🌳 Extérieur : ${surfExt.value} m²`);
+
+    sectionVirtuelle.querySelectorAll('input[name="virtuel-options"]:checked').forEach(opt => {
+      infos.push(`🏡 Éléments extérieurs : ${opt.value}`);
+    });
+
+    sectionVirtuelle.querySelectorAll('input[name="virtuel-export"]:checked').forEach(opt => {
+      infos.push(`📤 Export : ${opt.value}`);
+    });
+
+    const commentaire = sectionVirtuelle.querySelector('textarea[name="commentaire-visite"]');
+    if (commentaire && commentaire.value.trim()) infos.push(`📝 Commentaire : ${commentaire.value.trim()}`);
+  }
+
+  return infos;
+}
+
+
+
+const remboursement = total * 0.5;
+const montantChamp = document.getElementById("resultatEstimation");
+montantChamp.innerHTML = `
+  <div class="card-block" style="background-color: #003a73; color: #fff; border-radius: 8px; padding: 1rem; margin-top: 1.5rem;">
+    <p>Total estimé de votre projet : <strong>${total.toLocaleString()} €</strong></p>
+    <p>Montant de la subvention estimée (50%) : <strong>${remboursement.toLocaleString()} €</strong></p>
+    <p>💡 Pour être éligible, votre projet doit être compris entre 5 001 € et 19 999 € HT.</p>
+    <button onclick="document.getElementById('montant').value = ${total}; document.getElementById('prestationsDetaillees').value = JSON.stringify(collecterInfosPrestation());" style="margin-top:1rem; background:#FFD700; color:#000; font-weight:bold; border:none; padding:0.75rem 1.5rem; border-radius:5px; cursor:pointer;">
+📥 Renseigner ce montant dans le simulateur d’éligibilité
+</button>
+  </div>
+`;
+}
+
+</script>
+<section class="simulateur-kap">
+  <h2 style="color: #FFD700;">📊 Simulateur d’éligibilité à Kap TPE</h2>
+  <p>🔍 La liste des codes APE éligibles est consultable ici :
+    <a href="https://data.artisanat.fr/nafa/" target="_blank" style="color: #FFD700; text-decoration: underline;">https://data.artisanat.fr/nafa/</a>
+  </p>
+
+  <label for="ape">Code APE :</label>
+  <input type="text" id="ape" list="ape-list" placeholder="ex : 7420ZS" />
+  <datalist id="ape-list"></datalist>
+
+  <label for="ca">Chiffre d'affaires (en €) - max : 1 000 000 €</label>
+  <input type="number" id="ca" placeholder="ex : 850000" />
+
+  <label for="salaries">Nombre de salariés - max : 10</label>
+  <input type="number" id="salaries" placeholder="ex : 3" />
+
+  <label for="montant">Montant du projet (HT en €) - entre 5 001 € et 19 999 € :</label>
+  <input type="number" id="montant" placeholder="ex : 12000" />
+
+  <label for="zone">Êtes-vous situé dans les Hauts de l'île ?</label>
+  <select id="zone">
+    <option value="non">Non</option>
+    <option value="oui">Oui</option>
+  </select>
+
+  <input type="hidden" id="prestationsDetaillees" />
+
+  <button onclick="verifierEligibilite()">✅ Vérifier l'éligibilité</button>
+
+<div id="result"></div>
+
+<div id="contact-formulaire" style="margin-top: 2rem; display: none;">
+  <h3>📬 Envoyez votre demande personnalisée</h3>
+  <p>Merci de renseigner vos coordonnées pour recevoir une analyse complète.</p>
+
+  <label>Nom / Prénom :</label>
+  <input type="text" id="nom" placeholder="Jean Dupont" required>
+
+  <label>Email :</label>
+  <input type="email" id="email" placeholder="exemple@email.com" required>
+
+  <label>Téléphone (+262...)</label>
+  <input type="tel" id="telephone" placeholder="+262..." required>
+
+
+<div id="resume-prestations" style="background-color: #003a73; color: white; padding: 1rem; border-radius: 8px; margin-top: 2rem;">
+  <h4>📌 Prestations sélectionnées :</h4>
+  <ul id="liste-prestations" style="padding-left: 1rem;"></ul>
+</div>
+
+<!-- Champ invisible pour transmettre les prestations -->
+<input type="hidden" id="prestationsDetaillees">
+
+
+  <button onclick="envoyerVersAppsScript()" class="cta-yellow" style="margin-top: 1rem;">
+    📤 Envoyer la demande à DCVisuals
+  </button>
+
+  <p id="confirmation-envoi" style="margin-top: 1rem; color: #FFD700;"></p>
+</div>
+
+</section>
+
+</script>
+
+
+
+
+
+
+
+  <section class="faq">
+    <h2>❓ Questions fréquentes</h2>
+    <details><summary>Qui peut bénéficier de Kap TPE ?</summary><p>Tout artisan ou restaurateur à La Réunion, avec un projet numérique entre 5 001 € et 19 999 € HT.</p></details>
+    <details><summary>Faut-il avancer les frais ?</summary><p>Oui, l’aide est versée après validation du projet et de la facture. Nous vous aidons à planifier cela.</p></details>
+    <details><summary>Combien de temps pour obtenir la subvention ?</summary><p>Le traitement du dossier peut prendre 4 à 8 semaines selon les périodes.</p></details>
+  </section>
+
+  <section class="cta-final">
+    <h2>📩 Envie de faire évoluer votre entreprise ?</h2>
+    <p>Nous vous accompagnons à chaque étape. Ensemble, valorisons votre image.</p>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('section');
+      observer.observe(section);
+    });
+  </script>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  </script>
+<!-- 🔽 Ton script ici juste avant la fermeture -->
+<script>
+let codesAPEEligibles = []; // ← déclaration globale ici
+
+// 🔧 Fonction pour retrouver le libellé à partir du code APE
+function getLibelleAPE(code) {
+  const entry = codesAPEEligibles.find(e => e.code === code);
+  return entry ? entry.label : "";
+}
+
+// 🔧 Fonction collecterInfosPrestation ici (celle que tu viens d’ajouter)
+
+function collecterInfosPrestation() {
+  const infos = [];
+
+  // 📸 Reportage photo professionnel
+  const sectionPhoto = document.querySelector('[data-section="📸 Reportage photo professionnel"]');
+  if (sectionPhoto) {
+    infos.push("📸 Reportage photo professionnel");
+
+    const pack = sectionPhoto.querySelector('select[name="pack-photo"]');
+    if (pack && pack.value) infos.push(`📦 Pack : ${pack.value}`);
+
+    const drone = sectionPhoto.querySelector('input[name="drone-photo"]');
+    if (drone && drone.checked) infos.push("🚁 Prise de vue drone");
+
+    const surface = sectionPhoto.querySelector('input[name="surface-photo"]');
+    if (surface && surface.value) infos.push(`📐 Surface à modéliser : ${surface.value} m²`);
+
+    const detail = sectionPhoto.querySelector('input[name="niveau-detail"]');
+    if (detail && detail.value) infos.push(`📊 Détail : ${detail.value}`);
+
+    const ortho = sectionPhoto.querySelector('input[name="orthophoto"]');
+    if (ortho && ortho.checked) infos.push("🖼️ Orthophoto");
+
+    const modele = sectionPhoto.querySelector('input[name="modele-3d"]');
+    if (modele && modele.checked) infos.push("📦 Modèle 3D");
+
+    const brutes = sectionPhoto.querySelector('input[name="photos-brutes"]');
+    if (brutes && brutes.value) infos.push(`📷 Photos non retouchées : ${brutes.value}`);
+
+    const commentaire = sectionPhoto.querySelector('textarea[name="commentaire-photo"]');
+    if (commentaire && commentaire.value.trim()) infos.push(`📝 Commentaire : ${commentaire.value.trim()}`);
+  }
+
+// 🎥 Vidéo de présentation ou promotion
+  const sectionVideo = document.querySelector('[data-section="🎥 Vidéo de présentation ou promotion"]');
+  if (sectionVideo) {
+    infos.push("🎥 Vidéo de présentation ou promotion");
+
+    const type = sectionVideo.querySelector('select[name="type-video"]');
+    if (type && type.value) infos.push(`🎬 Type : ${type.value}`);
+
+    const quantite = sectionVideo.querySelector('input[name="quantite-video"]');
+    if (quantite && quantite.value) infos.push(`🎞️ Quantité : ${quantite.value}`);
+
+    sectionVideo.querySelectorAll('input[name="video-options"]:checked').forEach(opt => {
+      infos.push(`⚙️ Option : ${opt.value}`);
+    });
+
+    const commentaire = sectionVideo.querySelector('textarea[name="commentaire-video"]');
+    if (commentaire && commentaire.value.trim()) infos.push(`📝 Commentaire : ${commentaire.value.trim()}`);
+  }
+
+ // 🌐 Création de site web
+  const sectionSite = document.querySelector('[data-section="🌐 Création de site internet"]');
+  if (sectionSite) {
+    infos.push("🌐 Création de site internet");
+
+    const type = sectionSite.querySelector('select[name="type-site"]');
+    if (type && type.value) infos.push(`🌍 Type de site : ${type.value}`);
+
+    sectionSite.querySelectorAll('input[name="site-options"]:checked').forEach(opt => {
+      infos.push(`🧩 Fonctionnalité : ${opt.value}`);
+    });
+
+    sectionSite.querySelectorAll('input[name="site-contenu"]:checked').forEach(opt => {
+      infos.push(`📝 Contenu : ${opt.value}`);
+    });
+
+    sectionSite.querySelectorAll('input[name="site-identite"]:checked').forEach(opt => {
+      infos.push(`🎨 Identité visuelle : ${opt.value}`);
+    });
+
+    const commentaire = sectionSite.querySelector('textarea[name="commentaire-site"]');
+    if (commentaire && commentaire.value.trim()) infos.push(`📝 Commentaire : ${commentaire.value.trim()}`);
+  }
+
+ // 🌀 Visite virtuelle immersive
+  const sectionVirtuelle = document.querySelector('[data-section="🏠 Visite virtuelle immersive"]');
+  if (sectionVirtuelle) {
+    infos.push("🏠 Visite virtuelle immersive");
+
+    const surfInt = sectionVirtuelle.querySelector('input[name="surface-int"]');
+    if (surfInt && surfInt.value) infos.push(`📏 Intérieur : ${surfInt.value} m²`);
+
+    const surfExt = sectionVirtuelle.querySelector('input[name="surface-ext"]');
+    if (surfExt && surfExt.value) infos.push(`🌳 Extérieur : ${surfExt.value} m²`);
+
+    sectionVirtuelle.querySelectorAll('input[name="virtuel-options"]:checked').forEach(opt => {
+      infos.push(`🏡 Éléments extérieurs : ${opt.value}`);
+    });
+
+    sectionVirtuelle.querySelectorAll('input[name="virtuel-export"]:checked').forEach(opt => {
+      infos.push(`📤 Export : ${opt.value}`);
+    });
+
+    const commentaire = sectionVirtuelle.querySelector('textarea[name="commentaire-visite"]');
+    if (commentaire && commentaire.value.trim()) infos.push(`📝 Commentaire : ${commentaire.value.trim()}`);
+  }
+
+  return infos;
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  let codesAPEEligibles = [];
+
+  // Chargement des codes APE depuis le JSON
+  fetch("https://dcvisuals.github.io/Simulateur-Kap-TPE-v2/codes-ape.json")
+    .then(response => response.json())
+    .then(data => {
+      codesAPEEligibles = data.codes.map(entry => ({
+        code: entry.code.toUpperCase(),
+        label: entry.label
+      }));
+      const dataList = document.getElementById("ape-list");
+      codesAPEEligibles.forEach(entry => {
+        const option = document.createElement("option");
+        option.value = entry.code;
+        option.textContent = `${entry.code} - ${entry.label}`;
+        dataList.appendChild(option);
+      });
+    });
+
+  function getLibelleAPE(code) {
+    const entry = codesAPEEligibles.find(e => e.code === code);
+    return entry ? entry.label : "";
+  }
+
+  window.verifierEligibilite = function () {
+    console.log("✅ Fonction verifierEligibilite déclenchée");
+
+    const ape = document.getElementById("ape").value.toUpperCase().trim();
+    const ca = parseInt(document.getElementById("ca").value);
+    const salaries = parseInt(document.getElementById("salaries").value);
+    const montant = parseInt(document.getElementById("montant").value);
+    const zone = document.getElementById("zone").value;
+    const result = document.getElementById("result");
+
+    if (!ape || isNaN(ca) || isNaN(salaries) || isNaN(montant)) {
+      result.innerHTML = "<strong>Erreur :</strong> Veuillez remplir tous les champs.";
+      result.style.color = "#ff6b6b";
+      document.getElementById("contact-formulaire").style.display = "none";
+      return;
+    }
+
+    let errors = [];
+    const codeAPEInfo = codesAPEEligibles.find(e => e.code === ape);
+
+    if (!codeAPEInfo) errors.push("Votre code APE n’est pas éligible.");
+    const plafond = ["4789ZP", "4776ZP"].includes(ape) ? 400000 : 1000000;
+    if (ca > plafond) errors.push(`Chiffre d'affaires supérieur au plafond de ${plafond.toLocaleString()} €`);
+    if (salaries > 10) errors.push("L'entreprise dépasse le seuil de 10 salariés.");
+    if (montant < 5001 || montant > 19999) errors.push("Le montant du projet doit être entre 5 001 € et 19 999 € HT.");
+
+    if (errors.length > 0) {
+      result.innerHTML = "<strong>Résultat :</strong><br><ul><li>" + errors.join("</li><li>") + "</li></ul>";
+      result.style.color = "#FFD700";
+      document.getElementById("contact-formulaire").style.display = "none";
+    } else {
+      const taux = zone === "oui" ? 0.6 : 0.5;
+      const aide = Math.round(montant * taux);
+      const reste = montant - aide;
+
+      const libelle = getLibelleAPE(ape);
+      const corpsTexte = `Bonjour,
+
+Mon code APE est le ${ape} (${libelle}),
+Mon chiffre d'affaires est de ${ca} €,
+J'ai ${salaries} salarié(s),
+Le montant estimé de mon projet est de ${montant} €,
+Je suis situé dans les ${zone === "oui" ? "Hauts" : "Bas"} de l'île de la Réunion.
+
+Merci de me confirmer les étapes à suivre.
+
+Cordialement,`;
+
+      const corpsMail = encodeURIComponent(corpsTexte);
+
+      result.innerHTML = `<strong>Félicitations 🎉</strong><br>
+        Votre projet semble éligible à l’aide Kap TPE.<br>
+        Taux : ${taux * 100}%<br>
+        Aide estimée : ${aide.toLocaleString()} €<br>
+        Reste à charge : ${reste.toLocaleString()} €<br>
+
+        <div class="contact-buttons" style="margin-top:1rem;">
+          <a href="mailto:dolcecartolina.visuals@gmail.com?subject=Demande%20Kap%20TPE&body=${corpsMail}" style="display:inline-block; margin-right:1rem;">
+            📧 Contactez-nous</a>
+          <a href="tel:+262692200461">📞 Appelez-nous</a>
+        </div>`;
+
+      result.style.color = "#00e676";
+      document.getElementById("contact-formulaire").style.display = "block";
+
+      afficherResumePrestations();
+    }
+  }
+
+  function afficherResumePrestations() {
+    const prestations = collecterInfosPrestation(); // ← à garder de ton script
+    const liste = document.getElementById("liste-prestations");
+    const hidden = document.getElementById("prestationsDetaillees");
+
+    liste.innerHTML = "";
+    prestations.forEach(p => {
+      const li = document.createElement("li");
+      li.textContent = p;
+      liste.appendChild(li);
+    });
+
+    hidden.value = prestations.join(" / ");
+  }
+
+});
+
+function envoyerVersAppsScript() {
+  const nom = document.getElementById("nom").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const telephone = document.getElementById("telephone").value.trim();
+  const ape = document.getElementById("ape").value.toUpperCase().trim();
+  const ca = parseInt(document.getElementById("ca").value.trim());
+  const salaries = parseInt(document.getElementById("salaries").value.trim());
+  const montant = parseInt(document.getElementById("montant").value.trim());
+  const zone = document.getElementById("zone").value.trim();
+  const libelleAPE = getLibelleAPE(ape);
+  const prestations = collecterInfosPrestation();
+
+  if (!nom || !email || !telephone || !ape || isNaN(ca) || isNaN(salaries) || isNaN(montant)) {
+    alert("Merci de remplir tous les champs obligatoires.");
+    return;
+  }
+
+  const payload = {
+    nom,
+    email,
+    telephone,
+    ape,
+    libelleAPE,
+    ca,
+    salaries,
+    montant,
+    zone,
+    prestations
+  };
+
+// 🔍 Pour debug : Affiche ce qu'on envoie
+  console.log("Payload envoyé :", payload);
+
+  fetch("https://script.google.com/macros/s/AKfycbx6ozL2-aZxAIXG7cEq-mvifPPPXQHZ4LAhbfFMANGmKT0ytVGOq8IYT94iLP5L8shg/exec", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  })
+    .then(response => {
+      if (!response.ok) throw new Error("Erreur serveur");
+      return response.text();
+    })
+    .then(message => {
+      document.getElementById("confirmation-envoi").innerHTML =
+        "✅ Votre demande a bien été envoyée. Merci, nous vous répondrons rapidement.";
+    })
+    .catch(error => {
+  document.getElementById("confirmation-envoi").innerHTML =
+    "❌ Une erreur est survenue. Merci de réessayer plus tard.";
+  console.error("Erreur lors de l'envoi :", error);
+});
+}
+</script>
+<!-- FIN du body -->
+
+
+</body>
+</html>
