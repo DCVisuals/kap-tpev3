@@ -1395,7 +1395,7 @@ Cordialement,`;
         </div>`;
 
       result.style.color = "#00e676";
-      document.getElementById("contact-formulaire").style.display = "block";
+     document.getElementById("contact-formulaire").style.display = "block";
 
       afficherResumePrestations();
     }
@@ -1451,7 +1451,7 @@ function envoyerVersAppsScript() {
 // 🔍 Pour debug : Affiche ce qu'on envoie
   console.log("Payload envoyé :", payload);
 
-  fetch("https://script.google.com/macros/s/AKfycbwR7q-6KbTklrFMsw4QF42YOag9pZzqPryf-Tj2y1NCNrt3Ouo5BJUE8pSb7Iv2uYQM/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbw7eY3fQrjlhXV_-SxhMKkKPOOyBnPXnFSWYgG_zn3BId4k4Evv-1tO8L8hRENU60P1/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
